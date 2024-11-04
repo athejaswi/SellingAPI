@@ -14,6 +14,7 @@ router.post('/', (req, res) => {
 
 // Get all item-tag associations
 router.get('/', (req, res) => {
+    console.log("hi");
     const sql = `SELECT * FROM item_tags`;
     db.query(sql, (err, results) => {
         if (err) throw err;

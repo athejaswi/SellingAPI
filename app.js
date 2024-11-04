@@ -20,7 +20,7 @@ app.use('/tags', tagsRoute);
 app.use('/item-tags', itemTagsRoute);
 
 // Start server
-const PORT = 3000;
+const PORT = 2000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 app.use(express.json()); // parses JSON bodies
@@ -28,8 +28,4 @@ const cors = require('cors');
 app.use(cors()); // allows cross-origin requests from frontend
 
 // Routes
-app.use(itemsRoutes);
-
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+app.use(itemsRoute);
